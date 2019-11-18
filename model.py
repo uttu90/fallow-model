@@ -14,11 +14,12 @@ import util
 class SimulatingThread(QtCore.QThread):
     signal = QtCore.pyqtSignal(dict, dict, int, name='update')
 
-    def __init__(self, prj):
+    def __init__(self, prj, timeSimulation):
         super(SimulatingThread, self).__init__()
         self.prj = prj
         self.data_file = os.path.join(prj, 'data.xlsx')
         self.map_file = os.path.join(prj, 'maps.json')
+        self.timeSimulation = timeSimulation
 
     def run(self):
         input_data, input_ts = read_input.get_data(self.data_file)
@@ -87,149 +88,66 @@ class SimulatingThread(QtCore.QThread):
         # output_maps = output[MAPS]
 
         output_timeseries['Fire area'] = fire_area_timeseries = []
-        output_timeseries[
-            'Secondary consumption'] = secondary_consumption_timeseries = []
+        output_timeseries['Secondary consumption'] = secondary_consumption_timeseries = []
         output_timeseries['Net income'] = net_income_timeseries = []
-        output_timeseries['Population'] = total_population_timeseries = [
-            demography[DEMOGRAPHY[0]]]
-        output_timeseries[
-            'Aboveground biomass'] = aboveground_biomass_timeseries = []
-        output_timeseries[
-            'Aboveground carbon'] = aboveground_carbon_timeseries = []
-        output_timeseries[
-            'Establishment cost'] = establisment_cost_timeseries = []
-        output_timeseries[
-            'Potential area expansion'] = potential_area_expansion_timseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Non-labour costs'] = non_labour_cost_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Revenue'] = revenue_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Return to labour'] = return_to_labour_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Return to land'] = return_to_land_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Supply sufficiency'] = supply_sufficiency_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Land expansion labour'] = land_expansion_labour_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Land expansion budget'] = land_expansion_budget_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Actual area expansion'] = actual_area_expansion_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'New cultivated areas'] = new_cultivate_areas_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Available labour'] = available_labour_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Available money'] = available_money_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Expense'] = expense_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries['Income'] = income_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Potential yield'] = potential_yield_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-        output_timeseries[
-            'Actual yield'] = actual_yield_timeseries = util.create_nested_output(
-            LIVELIHOOD, []
-        )
-
-        output_timeseries[
-            'Land cover area'] = landcover_area_timeseries = util.create_nested_output(
-            LANDCOVER, []
-        )
-
-        output_timeseries[
-            'Land use area'] = landuse_area_timeseries = util.create_nested_output(
-            LANDUSE, []
-        )
-
-        output_timeseries[
-            'Subcatchment area '] = subcatchment_area_timeseries = util.create_nested_output(
-            SUBCATCHMENT, [])
-
+        output_timeseries['Population'] = total_population_timeseries = [demography[DEMOGRAPHY[0]]]
+        output_timeseries['Aboveground biomass'] = aboveground_biomass_timeseries = []
+        output_timeseries['Aboveground carbon'] = aboveground_carbon_timeseries = []
+        output_timeseries['Establishment cost'] = establisment_cost_timeseries = []
+        output_timeseries['Potential area expansion'] = potential_area_expansion_timseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Non-labour costs'] = non_labour_cost_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Revenue'] = revenue_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Return to labour'] = return_to_labour_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Return to land'] = return_to_land_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Supply sufficiency'] = supply_sufficiency_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Land expansion labour'] = land_expansion_labour_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Land expansion budget'] = land_expansion_budget_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Actual area expansion'] = actual_area_expansion_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['New cultivated areas'] = new_cultivate_areas_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Available labour'] = available_labour_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Available money'] = available_money_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Expense'] = expense_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Income'] = income_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Potential yield'] = potential_yield_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Actual yield'] = actual_yield_timeseries = util.create_nested_output(LIVELIHOOD, [])
+        output_timeseries['Land cover area'] = landcover_area_timeseries = util.create_nested_output(LANDCOVER, [])
+        output_timeseries['Land use area'] = landuse_area_timeseries = util.create_nested_output(LANDUSE, [])
+        output_timeseries['Subcatchment area'] = subcatchment_area_timeseries = util.create_nested_output(SUBCATCHMENT, [])
         output_maps['Landcover'] = output_landcover_maps = []
         output_maps['Aboveground carbon'] = output_aboveground_carbon_maps = []
         output_maps['Fire'] = output_fire_maps = []
         output_maps['Soil'] = output_soil_maps = []
         output_maps['Land use'] = ouput_land_use_maps = []
         output_maps['Aboveground biomass'] = output_aboveground_biomass_maps = []
-
         labour_money_fraction = util.create_nested_output(LIVELIHOOD, {})
         land_money_fraction = util.create_nested_output(LIVELIHOOD, {})
-
         balance = demography[DEMOGRAPHY[4]]
         store = {}
         PERIODS = [0, 50, 100, 150, 200]
         PIXEL_SIZE = 4
-        simulation_time = 30
+        # simulation_time = 2
         using_timeseries = False
-
-
         for land in LANDCOVER:
             if type(land) is str:
-                landage_map += util.arraystat(area_map,
-                                              biophysical1[land][
-                                                  LANDCOVER_AGE][
-                                                  INITIAL_LANDCOVER_AGE]) * \
-                               (init_landcover_map == LANDCOVER_MAP[land])
+                landage_map += util.arraystat(area_map, biophysical1[land][LANDCOVER_AGE][INITIAL_LANDCOVER_AGE]) * (init_landcover_map == LANDCOVER_MAP[land])
             else:
                 for key in land.keys():
                     for land_stage in land[key]:
-                        landage_map += util.arraystat(area_map,
-                                                      biophysical1[
-                                                          key][land_stage][
-                                                          LANDCOVER_AGE][
-                                                          INITIAL_LANDCOVER_AGE]) * (
-                                               init_landcover_map ==
-                                               LANDCOVER_MAP[key][land_stage])
+                        landage_map += util.arraystat(area_map, biophysical1[key][land_stage][LANDCOVER_AGE][INITIAL_LANDCOVER_AGE]) * (init_landcover_map == LANDCOVER_MAP[key][land_stage])
 
         for land in LANDCOVER:
             if type(land) is str:
-                landuse_map += (init_landcover_map ==
-                                LANDCOVER_MAP[land]) * LANDUSE_MAP[land]
+                landuse_map += (init_landcover_map == LANDCOVER_MAP[land]) * LANDUSE_MAP[land]
             else:
                 for key in land.keys():
                     for land_stage in land[key]:
-                        landuse_map += (init_landcover_map ==
-                                        LANDCOVER_MAP[key][land_stage]) * \
-                                       LANDUSE_MAP[key]
+                        landuse_map += (init_landcover_map == LANDCOVER_MAP[key][land_stage]) * LANDUSE_MAP[key]
 
         for livetype in LIVELIHOOD:
-            store[livetype] = demography[INITIAL_POPULATION] * biophysical2[livetype][
-                                  DEMAND_PER_CAPITA]
+            store[livetype] = demography[INITIAL_POPULATION] * biophysical2[livetype][DEMAND_PER_CAPITA]
 
         landcover_map = map_data_object[INITIAL_LANDCOVER]
-        irreversed_map = ~util.create_bool_map(
-            map_data_object[PROTECTED_AREA], 1)
+        irreversed_map = ~util.create_bool_map(map_data_object[PROTECTED_AREA], 1)
         marginal_agriculture_map = util.create_bool_map(area_map, 0)
         marginalAF_map = util.create_bool_map(area_map, 0)
 
@@ -240,7 +158,7 @@ class SimulatingThread(QtCore.QThread):
         standardized_distance_to_factory_maps = {}
         standardized_slope_map = util.standardize(map_data_object[SLOPE])
         self.signal.emit(output_timeseries, output_maps, 0)
-        for time in range(simulation_time):
+        for time in range(self.timeSimulation):
 
             total_buying = 0
             total_selling = 0
@@ -361,7 +279,9 @@ class SimulatingThread(QtCore.QThread):
                                                          landage_map >= landage_upper) * \
                                                  LANDCOVER_MAP[key][
                                                      land[key][-1]]
-            output_landcover_maps.append(current_landcover_map)
+            # output_landcover_maps.append(current_landcover_map)
+            lcname = os.path.join(self.prj, 'landcover[%s].tif' % str(time))
+            util.array2map(current_landcover_map, lcname, prototype)
             for land in LANDCOVER:
                 if type(land) is str:
                     landcover_area_timeseries[land].append(
@@ -694,7 +614,10 @@ class SimulatingThread(QtCore.QThread):
                 util.arraytotal(aboveground_biomass_map))
             aboveground_carbon_timeseries.append(
                 util.arraytotal(aboveground_carbon_map))
-            output_aboveground_carbon_maps.append(aboveground_carbon_map)
+            # output_aboveground_carbon_maps.append(aboveground_carbon_map)
+            agcarbon_name = os.path.join(self.prj, 'aboveground_carbon[%s].tif' % str(time))
+            util.array2map(aboveground_carbon_map, agcarbon_name, prototype)
+
             for livetype in LIVELIHOOD:
                 store[livetype] = max(0, store[livetype] * (1 -
                                                             biophysical2[
@@ -983,7 +906,9 @@ class SimulatingThread(QtCore.QThread):
             fire_map = (util.arrayfill(util.uniform(
                 standardized_fire_ignition_map < 2 * PIXEL_SIZE),
                                             1) < pfireuse) | all_fire_ignition_map
-            output_fire_maps.append(fire_map)
+            # output_fire_maps.append(fire_map)
+            firename = os.path.join(self.prj, "fire[%s].tif" % str(time))
+            util.array2map(fire_map, firename, prototype)
             fire_area_timeseries.append(util.arraytotal(fire_map))
             total_population_timeseries[time] = total_population_timeseries[
                                                     time] * (1 +
@@ -1074,14 +999,19 @@ class SimulatingThread(QtCore.QThread):
                                     INITIAL_SOIL_FERTILITY]
             soil_recovery_map = util.arrayfill(soil_recovery_map,
                                                     0) * area_map
+            # map_data_object[SOIL_FERTILITY][
+                #     MAXIMUM_SOIL_FERTILITY]
             soil_ferlity_map = numpy.minimum(
-                map_data_object[SOIL_FERTILITY][
-                    MAXIMUM_SOIL_FERTILITY], numpy.maximum(
+                5 * map_data_object[SOIL_FERTILITY][
+                        INITIAL_SOIL_FERTILITY]
+                , numpy.maximum(
                     map_data_object[SOIL_FERTILITY][
                         INITIAL_SOIL_FERTILITY] + soil_recovery_map - soil_depletion_map,
                     0))
 
-            output_soil_maps.append(soil_ferlity_map)
+            # output_soil_maps.append(soil_ferlity_map)
+            soilname = os.path.join(self.prj, "soil[%s].tif" % str(time))
+            util.array2map(soil_ferlity_map, soilname, prototype)
 
             forest_plot_map = (fire_map > 0) & (
                 ~all_new_plot_map) | util.create_bool_map(
@@ -1100,7 +1030,9 @@ class SimulatingThread(QtCore.QThread):
             landuse_map = plot_map + forest_plot_map + (
                         plot_map > 0) * landuse_map
 
-            ouput_land_use_maps.append(landuse_map)
+            # ouput_land_use_maps.append(landuse_map)
+            luname = os.path.join(self.prj, "landuse[%s].tif" % str(time))
+            util.array2map(landuse_map, luname, prototype)
 
             age_biomass_stats_maps = {}
             for forest_stage in FOREST_STAGES:
@@ -1113,6 +1045,7 @@ class SimulatingThread(QtCore.QThread):
             for idx, forest_stage in enumerate(FOREST_STAGES[:-1]):
                 agebased_biomass_map += ((aboveground_biomass_map > biophysical1[FOREST][forest_stage][LANDCOVER_PROPERTY][ABOVEGROUND_BIOMASS][MEAN]) & (aboveground_biomass_map < biophysical1[FOREST][FOREST_STAGES[idx + 1]][LANDCOVER_PROPERTY][ABOVEGROUND_BIOMASS][MEAN])) * age_biomass_stats_maps[forest_stage]
 
-            output_aboveground_biomass_maps.append(agebased_biomass_map)
-
+            # output_aboveground_biomass_maps.append(agebased_biomass_map)
+            agbasedbiomassname = os.path.join(self.prj, 'aboveground_biomass[%s].tif' % str(time))
+            util.array2map(agebased_biomass_map, agbasedbiomassname, prototype)
             self.signal.emit(output_timeseries, output_maps, time)

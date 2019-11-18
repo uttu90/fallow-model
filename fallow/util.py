@@ -79,15 +79,14 @@ def uniform(array):
 def spreadmap(array, prototype):
     elevation = prototype.GetRasterBand(1).ReadAsArray()
     geoTransform = prototype.GetGeoTransform()
-    pcraster.setclone(elevation.shape[0], elevation.shape[1], 4,
+    pcraster.setclone(elevation.shape[0], elevation.shape[1], geoTransform[1],
                       geoTransform[0], geoTransform[3])
     sarray = 1.0 * array
     farr = np.ma.filled(sarray, -9999)
     n2p = pcraster.numpy2pcr(pcraster.Nominal, farr, -9999)
     n2p = pcraster.spread(n2p, 0, 1)
     p2n = pcraster.pcr2numpy(n2p, -9999)
-    temp = np.ma.masked_where(p2n == -9999, p2n)
-    return temp
+    return np.ma.masked_where(p2n == -9999, p2n)
 
 
 def boolean2scalar(array):
@@ -207,6 +206,14 @@ def array2map(array, filename, prototype):
     outdata = outdriver.Create(filename, rows, cols, 1, gdal.GDT_Float32)
     outdata.SetGeoTransform(prototype.GetGeoTransform())
     outdata.SetProjection(prototype.GetProjection())
+    outdata.GetRasterBand(1).WriteArray(data, 0, 0)
+
+def save2file(array, filename):
+    data = array.astype(np.float32)
+    data = np.ma.filled(data, fill_value=-9999)
+    [cols, rows] = array.shape
+    outdriver = gdal.GetDriverByName("GTiff")
+    outdata = outdriver.Create(filename, rows, cols, 1, gdal.GDT_Float32)
     outdata.GetRasterBand(1).WriteArray(data, 0, 0)
 
 # def init_landcover_age_arr(init_landcover_arr, init_landcover_age, landcover_map, lands):

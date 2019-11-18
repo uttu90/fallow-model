@@ -1,0 +1,830 @@
+[
+  {
+    "Simulated area": {
+      "text": "Simulated area",
+      "type": "bool",
+      "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_border.tif",
+      "description": ""
+    }
+  },
+  {
+    "Initial landcover": {
+      "text": "Initial landcover",
+      "type": "landcover",
+      "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_luse_2010.tif",
+      "description": ""
+    }
+  },
+  {
+    "Sub-catchment area": {
+      "text": "Sub-catchment area",
+      "type": "bool",
+      "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_border.tif",
+      "description": ""
+    }
+  },
+  {
+    "Initial logging area": {
+      "text": "Initial logging area",
+      "type": "bool",
+      "path": "C:/Users/uttu/Downloads/Data/BK_border.tif",
+      "description": ""
+    }
+  },
+  {
+    "Soil fertility": [
+      {
+        "Initial soil fertility": {
+          "text": "Initial soil fertility",
+          "type": "soil",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_soil_fertility.tif",
+          "description": ""
+        }
+      },
+      {
+        "Maximum soil fertility": {
+          "text": "Maximum soil fertility",
+          "type": "soil",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_soil_fertility.tif",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "Slope": {
+      "text": "Slope",
+      "type": "linear",
+      "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_elevation.tif",
+      "description": ""
+    }
+  },
+  {
+    "Suitable area": [
+      {
+        "Annual crop 1": {
+          "text": "Annual crop 1",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_rice_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Annual crop 2": {
+          "text": "Annual crop 2",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_mixedcrops_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Annual crop 3": {
+          "text": "Annual crop 3",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_shfitingcultivation_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Annual crop 4": {
+          "text": "Annual crop 4",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_shfitingcultivation_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 1": {
+          "text": "Tree-based system 1",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_forest_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 2": {
+          "text": "Tree-based system 2",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_forest_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 3": {
+          "text": "Tree-based system 3",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_forest_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 4": {
+          "text": "Tree-based system 4",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_forest_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 5": {
+          "text": "Tree-based system 5",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_perennialcrop_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 6": {
+          "text": "Tree-based system 6",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_perennialcrop_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 7": {
+          "text": "Tree-based system 7",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_shfitingcultivation_sui.tif",
+          "description": ""
+        }
+      },
+      {
+        "Tree-based system 8": {
+          "text": "Tree-based system 8",
+          "type": "bool",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_forest_sui.tif",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "Distance to road": [
+      {
+        "Period 1": {
+          "text": "Period 1",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_road.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 2": {
+          "text": "Period 2",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_road.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 3": {
+          "text": "Period 3",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_road.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 4": {
+          "text": "Period 4",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_road.tif",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "Distance to market": [
+      {
+        "Period 1": {
+          "text": "Period 1",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 2": {
+          "text": "Period 2",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 3": {
+          "text": "Period 3",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 4": {
+          "text": "Period 4",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "Distance to river": [
+      {
+        "Period 1": {
+          "text": "Period 1",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_stream.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 2": {
+          "text": "Period 2",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_stream.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 3": {
+          "text": "Period 3",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_stream.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 4": {
+          "text": "Period 4",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_stream.tif",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "Distance to factory": [
+      {
+        "Non-timber forest product": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Timber": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Annual crop 1": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Annual crop 2": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Annual crop 3": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Annual crop 4": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 1": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 2": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 3": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 4": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 5": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 6": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 7": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      },
+      {
+        "Tree-based system 8": [
+          {
+            "Period 1": {
+              "text": "Period 1",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 2": {
+              "text": "Period 2",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 3": {
+              "text": "Period 3",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          },
+          {
+            "Period 4": {
+              "text": "Period 4",
+              "type": "linear",
+              "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_market.tif",
+              "description": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Distance to settlement": [
+      {
+        "Period 1": {
+          "text": "Period 1",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_settlement.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 2": {
+          "text": "Period 2",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_settlement.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 3": {
+          "text": "Period 3",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_settlement.tif",
+          "description": ""
+        }
+      },
+      {
+        "Period 4": {
+          "text": "Period 4",
+          "type": "linear",
+          "path": "C:\\Users\\uttu\\Downloads\\Data\\BK_settlement.tif",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "Protected area": {
+      "text": "Protected area",
+      "type": "bool",
+      "path": "C:/Users/uttu/Downloads/Data/BK_plan_forest_reserve.tif",
+      "description": ""
+    }
+  },
+  {
+    "Disastered area": {
+      "text": "Disastered area",
+      "type": "bool",
+      "path": "C:/Users/uttu/Downloads/Data/BK_plan_forest_reserve.tif",
+      "description": ""
+    }
+  }
+]
